@@ -1,0 +1,57 @@
+[System]
+Name='150201123'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=15
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='LDL-Duzeyi'
+Range=[0 300]
+NumMFs=5
+MF1='Dusuk':'trapmf',[-1 0 90 110]
+MF2='Dusuk-Sinirda':'trapmf',[90 110 120 142]
+MF3='Sinirda':'trapmf',[123 141 150 170]
+MF4='Sinirda-Yuksek':'trapmf',[149 168 180 200]
+MF5='Yuksek':'trapmf',[179 200 316 362]
+
+[Input2]
+Name='HDL-Duzeyi'
+Range=[0 100]
+NumMFs=3
+MF1='Dusuk-HDL':'trapmf',[-45 -5 35 45]
+MF2='Orta-HDL':'trapmf',[35 45 55 65]
+MF3='Yuksek-HDL':'trapmf',[55 65 106 146]
+
+[Output1]
+Name='Kalp-Hastaligi-Riski'
+Range=[0 10]
+NumMFs=5
+MF1='Ekstra-Riskli':'trimf',[-4.11 0.01061 2.54]
+MF2='Yuksek-Riskli':'trimf',[0 2.5 5]
+MF3='Orta-Riskli':'trimf',[2.5 5 7.5]
+MF4='Dusuk-Riskli':'trimf',[5 7.5 10]
+MF5='Risk-Yok':'trimf',[7.5 10 12.5]
+
+[Rules]
+1 1, 3 (1) : 1
+1 2, 4 (1) : 1
+1 3, 5 (1) : 1
+2 1, 3 (1) : 1
+2 2, 4 (1) : 1
+2 3, 4 (1) : 1
+3 1, 2 (1) : 1
+3 2, 3 (1) : 1
+3 3, 4 (1) : 1
+4 1, 2 (1) : 1
+4 2, 2 (1) : 1
+4 3, 3 (1) : 1
+5 1, 1 (1) : 1
+5 2, 2 (1) : 1
+5 3, 3 (1) : 1
