@@ -1,4 +1,4 @@
-## Proje Konusu;
+## Proje Konusu:
 
 Bulanık mantık ile Kalp hastalığı riskini belirleyen, bir fuzzy  controller yapısı oluşturmak.
 
