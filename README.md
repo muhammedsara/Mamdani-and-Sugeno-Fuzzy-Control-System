@@ -82,4 +82,3 @@ Tüm kuralları eksiksiz bir biçimde programa girdikten sonra program çalışt
 
 ## Sugeno Bağıntı Yüzeyi
 ![](https://github.com/muhammedsara/Mamdani-and-Sugeno-Fuzzy-Control-System/blob/master/images/11.png?raw=true)
-
